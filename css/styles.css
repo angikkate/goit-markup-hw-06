@@ -136,11 +136,13 @@ button {
 
 .header-menu {
   position: fixed;
+  display: flex;
+  flex-direction: column;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  /* padding: 72px 16px 40px; */
+  padding: 72px 16px 40px;
   background-color: var(--white-color);
   overflow-y: auto;
   transform: translateX(100vw);
@@ -306,6 +308,24 @@ button {
         display: none;
     }
 
+    .header-menu {
+    position: static; 
+    transform: translateX(0); 
+    height: auto;
+    width: auto;
+    background-color: transparent;
+    overflow-y: visible;
+    padding: 0;
+    flex-direction: row; 
+    flex-grow: 1; 
+    display: flex;
+    align-items: center;
+  }
+
+  .close-btn, .mobile-socials {
+    display: none; 
+  }
+
     .header-logo {
         padding: 24px 0;
         margin-right: 120px;
@@ -358,17 +378,32 @@ button {
         text-decoration: underline;
     }
 
+    .contacts {
+      margin-left: auto;
+      margin-bottom: 0;
+    }
+
     .contacts-list {
-        flex-direction: column;
-        gap: 12px;
-        font-size: 12px;
-        line-height: 1.17;
-        letter-spacing: 0.04em;
+      flex-direction: column;
+      gap: 12px;
+      font-size: 12px;
+      line-height: 1.17;
+      letter-spacing: 0.04em;
     }
 
     .contacts-link {
         display: block;
     }
+
+    .nav-list {
+    flex-direction: row;
+    font-size: 16px; 
+    margin-left: 76px; 
+  }
+
+  .nav-link {
+    padding: 24px 0;
+  }
 }
 
 @media screen and (min-width: 1158px) {
